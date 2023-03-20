@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "1680f9c0-3bd8-446f-acb9-6237d88b092c",
+		"name": "test-api.k6.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26273294"
+	},
+	"item": [
+		{
+			"name": "Public APIs",
+			"item": [
+				{
+					"name": "public/crocodiles/",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/public/crocodiles/{id}/",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registration and authentication",
+			"item": [
+				{
+					"name": "user/register/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/user/register/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"user",
+								"register",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/cookie/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/auth/cookie/login/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"auth",
+								"cookie",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/cookie/logout/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/auth/cookie/logout/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"auth",
+								"cookie",
+								"logout",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/basic/login/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/auth/basic/login/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"auth",
+								"basic",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/token/login/",
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/auth/token/login/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"auth",
+								"token",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Private APIs",
+			"item": [
+				{
+					"name": "my/crocodiles/ =Create a new crocodile (max 100)=",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Sasho\",\n\"sex\":\"M\",\n\"date_of_birth\":\"2000-05-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/my/crocodiles/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"my",
+								"crocodiles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my/crocodiles/ =List all your crocodiles=",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "gogo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gogo1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/my/crocodiles/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"my",
+								"crocodiles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/my/crocodiles/{id}/ =Get a single crocodile=",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test-api.k6.io/my/crocodiles/12281564/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"my",
+								"crocodiles",
+								"12281564",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/my/crocodiles/{id}/ =Update your crocodile=",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Sasha\",\n\"sex\":\"F\",\n\"date_of_birth\":\"2010-05-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/my/crocodiles/12281564/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"my",
+								"crocodiles",
+								"12281564",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/my/crocodiles/{id}/ =Update selected fields on your crocodile=",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 12281564,\n    \"name\": \"Sasha sha\",\n    \"sex\": \"F\",\n    \"date_of_birth\": \"2010-05-14\",\n    \"age\": 12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://test-api.k6.io/my/crocodiles/12281564/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"my",
+								"crocodiles",
+								"12281564",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/my/crocodiles/{id}/ =Remove your crocodile=",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://test-api.k6.io/my/crocodiles/12281566/",
+							"protocol": "https",
+							"host": [
+								"test-api",
+								"k6",
+								"io"
+							],
+							"path": [
+								"my",
+								"crocodiles",
+								"12281566",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
